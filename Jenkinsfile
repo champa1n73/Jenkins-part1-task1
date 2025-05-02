@@ -52,7 +52,11 @@ pipeline {
                 echo "Deploying application to production server (AWS EC2)..."
             }
         }
+
+        stage('Hello'){
+            steps{
+
+            }
+        }
     }
 }
-
-// hello
