@@ -18,16 +18,20 @@ pipeline {
 
             post {
                 success {
-                    mail to: "giakhuong0703@gmail.com",
-                    subject: "Unit and Integration Tests Status Email",
-                    body: "Unit and Integration Tests completed successfully.",
-                    attachLog: true
+                    emailext(
+                        to: "giakhuong0703@gmail.com",
+                        subject: "Unit and Integration Tests Status Email",
+                        body: "Unit and Integration Tests completed successfully.",
+                        attachLog: true
+                    )
                 }
                 failure {
-                    mail to: "giakhuong0703@gmail.com",
-                    subject: "Unit and Integration Tests Status Email",
-                    body: "Unit and Integration Tests failed. Please check the logs for details.",
-                    attachLog: true
+                    emailext(
+                        to: "giakhuong0703@gmail.com",
+                        subject: "Unit and Integration Tests Status Email",
+                        body: "Unit and Integration Tests failed. Please check the logs for details.",
+                        attachLog: true
+                    )
                 }
             }
         }
@@ -47,16 +51,20 @@ pipeline {
 
             post {
                 success {
-                    mail to: "giakhuong0703@gmail.com",
-                    subject: "Security Scan Status Email",
-                    body: "Security Scan Step run successfully!",
-                    attachLog: true
+                    emailext(
+                        to: "giakhuong0703@gmail.com",
+                        subject: "Security Scan Status Email",
+                        body: "Security Scan Step run successfully!",
+                        attachLog: true
+                    )
                 }
                 failure {
-                    mail to: "giakhuong0703@gmail.com",
-                    subject: "Security Scan Status Email",
-                    body: "Security Scan failed. Please review the scan report for vulnerabilities.",
-                    attachLog: true
+                    emailext(
+                        to: "giakhuong0703@gmail.com",
+                        subject: "Security Scan Status Email",
+                        body: "Security Scan failed. Please review the scan report for vulnerabilities.",
+                        attachLog: true
+                    )
                 }
             }
         }
@@ -76,16 +84,20 @@ pipeline {
 
             post {
                 success {
-                    mail to: "giakhuong0703@gmail.com",
-                    subject: "Integration Tests on Staging Status Email",
-                    body: "Integration Tests on Staging completed successfully.",
-                    attachLog: true
+                    emailext(
+                        to: "giakhuong0703@gmail.com",
+                        subject: "Integration Tests on Staging Status Email",
+                        body: "Integration Tests on Staging completed successfully.",
+                        attachLog: true
+                    )
                 }
                 failure {
-                    mail to: "giakhuong0703@gmail.com",
-                    subject: "Integration Tests on Staging Status Email",
-                    body: "Integration Tests on Staging failed. Please check the logs for details.",
-                    attachLog: true
+                    emailext(
+                        to: "giakhuong0703@gmail.com",
+                        subject: "Integration Tests on Staging Status Email",
+                        body: "Integration Tests on Staging failed. Please check the logs for details.",
+                        attachLog: true
+                    )
                 }
             }
         }
